@@ -9,33 +9,69 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.grey,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.white,
-                child: Center(
-                  child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/avatar.jpeg'),
+              ),
+              Text(
+                'Avatar Yo',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
+              ),
+              Text(
+                'Flutter',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    letterSpacing: 2.5),
               ),
               SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-                child: Center(
-                  child: Text('Container 2'),
+                height: 20,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.green,
-                child: Center(
-                  child: Text('Container 3'),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+1 2233 445566',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'example@xyz.com',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
               ),
             ],
